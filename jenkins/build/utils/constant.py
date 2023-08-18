@@ -1,5 +1,5 @@
 # data MCSTATUS
-MCSTATUS_PATH = '/data/data_mcstatus/gd' #'/data/MCSTATUS_ng' ,'D:/data/MCSTATUS_ng'
+MCSTATUS_PATH = 'D:/data/data_mcstatus/gd' #'/data/data_mcstatus/gd' ,'D:/data/data_mcstatus/gd'
 MCSTATUS_TABLE = 'data_mcstatus'
 MCSTATUS_TABLE_COLUMNS ='''
             registered_at datetime,

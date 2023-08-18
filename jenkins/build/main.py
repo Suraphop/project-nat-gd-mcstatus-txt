@@ -14,7 +14,6 @@ MCSTATUS = MCSTATUS(
         password=os.getenv('PASSWORD'),
         table=constant.MCSTATUS_TABLE,
         table_columns=constant.MCSTATUS_TABLE_COLUMNS,
-        
         table_log=constant.MCSTATUS_TABLE_LOG,
         table_columns_log=constant.MCSTATUS_TABLE_COLUMNS_LOG,
         notify_token=os.getenv('NOTIFY_TOKEN'),

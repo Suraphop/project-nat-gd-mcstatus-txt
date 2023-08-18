@@ -218,7 +218,7 @@ class MCSTATUS(PREPARE):
             self.error_msg(self.read_data.__name__,"pd cannot read csv file",e)
     
     def query_duplicate(self):
-        mc_no = self.path_now.split("/")[-1].split(".")[0]
+        mc_no = self.path_now.split("_")[-1].split(".")[0]
         query =  """SELECT TOP(3000)
          CONVERT(VARCHAR, [occurred],20) AS 'occurred',
          CAST([mc_status] AS int),
@@ -235,6 +235,7 @@ class MCSTATUS(PREPARE):
             df_from_db = self.query_duplicate()
             df = self.df
             df['occurred'] = pd.to_datetime(df.occurred)
+
             df_right_only = pd.merge(df_from_db,df , on = ["occurred","mc_no"], how = "right", indicator = True) 
             df_right_only = df_right_only[df_right_only['_merge'] == 'right_only'].drop(columns=['_merge'])
             if df_right_only.empty:              
