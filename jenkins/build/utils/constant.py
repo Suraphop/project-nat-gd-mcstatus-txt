@@ -1,7 +1,7 @@
 # data MCSTATUS
 MCSTATUS_PATH = '/data/data_mcstatus/gd' #'/data/MCSTATUS_ng' ,'D:/data/MCSTATUS_ng'
 MCSTATUS_TABLE = 'data_mcstatus'
-MC_STATUS_TABLE_COLUMNS ='''
+MCSTATUS_TABLE_COLUMNS ='''
             registered_at datetime,
 			occurred datetime,
 			mc_status varchar(50),
